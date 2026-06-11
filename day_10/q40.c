@@ -8,8 +8,14 @@ int main(){
         for(j = 65 ; j <= i ; j++){
             printf("%c" , j);
         }
-        for(k = 68 ; k >= i ; k--){
-            printf("%c" , k);
+        for(k = 1; k < 5 ; k++){
+            if((i-k) < 65){
+                printf(" ");
+            }
+
+           else{
+            printf("%c" , (i-k));
+           } 
         }
         printf("\n");
     }
