@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main(){
-    int i , j, k ;
-    for(i = 1 ; i <= 9 ; i++){
+    int i , j , k ;
+    for (i = 9 ; i >=1 ; i--){
         if(i%2 == 0){
             printf("\n");
         }
@@ -12,9 +12,8 @@ int main(){
             for(k = 1 ; k <= i ; k++){
                 printf("* ");
             }
-            printf("\n"); 
+            printf("\n");
         }
-        
     }
-    return 0 ; 
+    return 0;
 }
