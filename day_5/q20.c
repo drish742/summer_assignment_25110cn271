@@ -1,22 +1,27 @@
 #include <stdio.h>
 int main(){
     // largest prime factors
-    int n ;
-    printf("enter the number");
+    int n , i , j ;
+    printf("enter the number ");
     scanf("%d" , &n);
-    int i , r , j , max , rem ;
-    for(i = 2 ; i <=n ; i++){
-        r = n%i;
-        if (r == 0){
+    int r , max , rem ;
+    int flag = 0 ;
+    max = n ;
+    for(i = 2 ; i < n ; i++){
+        rem = n % i ;
+        if(rem == 0){
+            flag = 0;
             for(j = 2 ; j < i ; j++){
-                rem = i%j ;
-                if (rem != 0){
-                    max = i;
+                r = i % j ;
+                if(r == 0){
+                    flag ++ ;
                 }
-
+            }
+            if(flag == 0){
+                max = i ;
             }
         }
     }
-    printf("largest factor is %d" , max);
+    printf("largest factor is %d " , max);
     return 0 ;
 }
