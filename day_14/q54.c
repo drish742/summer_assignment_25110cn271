@@ -1,11 +1,13 @@
 #include <stdio.h>
 int main(){
+    //find frequency of an element
+
     int a[100] , n , i , j , ele ;
     printf("enter n ");
     scanf("%d" , &n);
     printf("enter elements ");
     for(i = 0 ; i < n ; i++){
-        scanf("%d" , &n);
+        scanf("%d" , &a[i]);
     }
     printf("enter the element whose frequency to be found ");
     scanf("%d" , &ele) ;
