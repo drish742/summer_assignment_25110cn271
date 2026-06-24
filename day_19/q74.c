@@ -19,10 +19,10 @@ int main(){
     }
     for(i = 0 ; i < n1 ; i++){
         for(j = 0 ; j < n2 ; j++){
-            c[i][j] = a[i][j] + b[i][j] ;
+            c[i][j] = a[i][j] - b[i][j] ;
         }
     }
-    printf("the sum the given two matrices is \n ");
+    printf("the difference the given two matrices is \n");
     for(i = 0 ; i < n1 ; i++){
         for(j = 0 ; j < n2 ; j++){
            printf("%d " , c[i][j]);
