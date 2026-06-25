@@ -7,10 +7,10 @@ int main(){
     int freq[256] = {0};
     int i, flag = 1;
 
-    printf("Enter first string: ");
+    printf("Enter first string in lowercase : ");
     fgets(str1, sizeof(str1), stdin);
 
-    printf("Enter second string: ");
+    printf("Enter second string in lowecase : ");
     fgets(str2, sizeof(str2), stdin);
 
     str1[strcspn(str1, "\n")] = '\0';
