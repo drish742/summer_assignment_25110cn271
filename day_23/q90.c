@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main(){
-    //find first non-repeating character
-    char str[1000];
+    //find first repeating character
+     char str[1000];
     int i, j, count;
     int found = 0;
 
@@ -20,17 +20,16 @@ int main(){
             }
         }
 
-        if(count == 1)
+        if(count > 1)
         {
-            printf("First non-repeating character = %c", str[i]);
+            printf("First repeating character = %c", str[i]);
             found = 1;
             break;
         }
     }
-    if(found == 0)
+     if(found == 0)
     {
-        printf("No non-repeating character found");
+        printf("No repeating character found");
     }
-
-    return 0 ;
+    return 0;
 }
