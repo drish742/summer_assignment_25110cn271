@@ -32,5 +32,6 @@ int main(){
 
     printf("Maximum occurring character = %c\n", maxChar);
     printf("Freauency = %d", maxFreq);
+    
     return 0 ;
 }
