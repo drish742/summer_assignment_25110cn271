@@ -1,15 +1,45 @@
 #include <stdio.h>
-int main(){
-    //selection sort
-    int n ;
-    printf("enter the n ");
-    scanf("%d" , &n);
-    int a[n] , i , j ;
-    printf("enter the elements ");
-    for(i = 0 ; i < n ; i++){
-        scanf("%d" , &a[i]);
+
+int main()
+{
+    int arr[100], n;
+    int i, j, minIndex, temp;
+
+    printf("Enter number of elements: ");
+    scanf("%d", &n);
+
+    printf("Enter %d elements:\n", n);
+
+    for(i = 0; i < n; i++)
+    {
+        scanf("%d", &arr[i]);
     }
-    int min ;
-    for(i = 0 ; i <)
+
+    // Selection Sort
+    for(i = 0; i < n - 1; i++)
+    {
+        minIndex = i;
+
+        for(j = i + 1; j < n; j++)
+        {
+            if(arr[j] < arr[minIndex])
+            {
+                minIndex = j;
+            }
+        }
+
+        // Swap
+        temp = arr[i];
+        arr[i] = arr[minIndex];
+        arr[minIndex] = temp;
+    }
+
+    printf("\nSorted Array:\n");
+
+    for(i = 0; i < n; i++)
+    {
+        printf("%d ", arr[i]);
+    }
+
     return 0;
 }
