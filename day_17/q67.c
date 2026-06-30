@@ -2,9 +2,9 @@
 
 int main()
 {
-    int a[100], b[100], c[200];
+    int a[100], b[100];
     int n1, n2;
-    int i;
+    int i, j;
 
     printf("Enter size of first array: ");
     scanf("%d", &n1);
@@ -24,23 +24,18 @@ int main()
         scanf("%d", &b[i]);
     }
 
-    // Copy first array
+    printf("\nIntersection of arrays is:\n");
+
     for(i = 0; i < n1; i++)
     {
-        c[i] = a[i];
-    }
-
-    // Copy second array
-    for(i = 0; i < n2; i++)
-    {
-        c[n1 + i] = b[i];
-    }
-
-    printf("\nMerged Array:\n");
-
-    for(i = 0; i < n1 + n2; i++)
-    {
-        printf("%d ", c[i]);
+        for(j = 0; j < n2; j++)
+        {
+            if(a[i] == b[j])
+            {
+                printf("%d ", a[i]);
+                break;
+            }
+        }
     }
 
     return 0;
